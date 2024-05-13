@@ -46,11 +46,9 @@ class Person {
   }
 }
 
-const john = new Person("John", 30);
+john = new Person("John", 30);
 john.greet(); // Output: Hello, my name is John
 
-// 5. const
-const PI = 3.14159; // Constant variable
 
 // 6. continue
 for (let i = 0; i < 5; i++) {
@@ -68,8 +66,8 @@ function sum(a, b) {
 }
 
 // 8. default
-let option = 2;
-let result = "";
+const option = 2;
+result = "";
 switch (option) {
   case 1:
     result = "Option 1";
@@ -80,12 +78,12 @@ switch (option) {
 }
 
 // 9. delete
-const obj = { a: 1, b: 2 };
+obj = { a: 1, b: 2 };
 delete obj.a; // Delete the 'a' property
 console.log(obj); // Output: { b: 2 }
 
 // 10. do...while
-let count = 0;
+count = 0;
 do {
   console.log(count); // Executes at least once
   count++;
@@ -93,7 +91,7 @@ do {
 // Output: 0 1 2 3 4
 
 // 11. else
-let age = 18;
+age = 18;
 if (age >= 18) {
   console.log("You are an adult");
 } else {
@@ -132,11 +130,10 @@ class Dog extends Animal {
   }
 }
 
-const dog = new Dog("Labrador");
+dog = new Dog("Labrador");
 dog.speak(); // Output: The Labrador barks.
 
 // 14. false
-let isRaining = false;
 
 // 15. finally
 try {
