@@ -1,13 +1,11 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "./style.css";
+import javascriptLogo from "./javascript.svg";
+import { setupCounter } from "./counter.js";
 
-function teyy(){
-  console.log("supp")
-}
-document.querySelector('#app').innerHTML = `
+const helloo = "hellooooo";
+document.querySelector("#app").innerHTML = `
   <div>
+    <h2>${helloo}</h2>
     <a href="https://vitejs.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
     </a>
@@ -22,6 +20,6 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector("#counter"));
