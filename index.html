@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite App</title>
-    </head>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+		<script type="module" src="./index.js"></script>
+	</head>
 
-    <body>
-        <div id="app"></div>
-        <script type="module" src="/main.js"></script>
-        <h1 class="text-3xl font-bold text-red-500">Hello World</h1>
-        <div id="array"></div>
-
-        <script type="module" src="/array.js"></script>
-    </body>
+	<body class="grid place-items-center mt-6 text-2xl text-center bg-gray-800">
+		<div class="text-gray-200" id="app"></div>
+		<ul
+			id="chars"
+			class="p-4 list-none text-right text-gray-200 rounded-lg rotate-90 min-hight-[80vh] mt-[-450px]"
+		></ul>
+	</body>
 </html>
