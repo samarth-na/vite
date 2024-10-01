@@ -81,5 +81,5 @@ async function quicksort(arr) {
 	return [...quickSort(left), ...middle, ...quickSort(right)];
 }
 
-quicksort(randomarray(64, 70));
-//bubblesort(randomarray(64, 70));
+//quicksort(randomarray(64, 70));
+bubblesort(randomarray(64, 70));
