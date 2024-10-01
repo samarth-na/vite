@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,html}", "./htmls/*.html"],
+	content: [
+		"./index.html",
+		"./src/**/*.{js,ts,jsx,tsx,html}",
+		"./htmls/*.html",
+	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				github: ["Inter", "sans-serif"], // Naming the font "github" for convenience
+			},
+		},
 	},
 	plugins: [],
 };
