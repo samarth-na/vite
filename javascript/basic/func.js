@@ -1,3 +1,0 @@
-function retu() {
-    return "hello";
-}

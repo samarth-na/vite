@@ -1,4 +1,5 @@
 import "../style.css";
+
 const charsh = document.getElementById("chars");
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
