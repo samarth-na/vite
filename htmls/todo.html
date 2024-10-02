@@ -6,32 +6,43 @@
 		<title>Document</title>
 		<script type="module" src="../src/todo.js"></script>
 	</head>
+
 	<body
-		class="grid gap-4 place-items-center m-12 text-3xl font-bold text-center text-gray-600 bg-gray-100"
+		class="grid gap-4 place-items-center mt-12 text-3xl font-semibold text-center text-gray-600 bg-gray-100 grid-row-1 uniform-width font-github"
 	>
-		<h1 class="text-6xl font-bold text-red-400">Todo List</h1>
+		<a
+			href="../index.html"
+			class="py-2 px-4 bg-white rounded-xl shadow-lg w-[25vw]"
+		>
+			home
+		</a>
+		<h1 class="py-2 bg-white rounded-xl shadow-lg w-[25vw]">Todo List</h1>
 
-		<input type="text" id="input" class="p-2 text-center rounded-2xl" />
+		<input
+			type="text"
+			id="input"
+			class="p-2 text-center rounded-xl shadow-lg w-[25vw]"
+		/>
 
-		<p id="output" class="p-2 h-10 rounded-2xl"></p>
-
-		<div class="px-4 rounded-2xl">
+		<div class="flex flex-row gap-2 rounded-2xl w-[25vw]">
 			<button
 				type="button"
 				id="add"
-				class="p-2 text-teal-400 bg-white rounded-2xl"
+				class="flex-1 text-blue-400 bg-white rounded-2xl shadow-lg"
 			>
 				Add
 			</button>
 			<button
 				type="button"
 				id="delete"
-				class="p-2 text-blue-400 bg-white rounded-2xl"
+				class="flex-1 py-2 text-red-400 bg-white rounded-xl shadow-lg"
 			>
-				delete
+				Delete
 			</button>
 		</div>
-
-		<ol class="list-decimal list-inside" id="list"></ol>
+		<ol
+			class="gap-4 list-decimal list-inside bg-white rounded-xl shadow-lg w-[25vw]"
+			id="list"
+		></ol>
 	</body>
 </html>
