@@ -3,12 +3,17 @@
 @tailwind utilities;
 
 .list {
-	flex: 1;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	font-semibold: true;
-	background-color: #ffffff;
-	border-radius: 0.75rem;
+    flex: 1;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-semibold: true;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+}
+
+/* styles.css */
+.li-a {
+    @apply block p-4 bg-white rounded-lg transition duration-300 ease-in-out hover:bg-gray-50 hover:shadow-lg;
 }
