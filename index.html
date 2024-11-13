@@ -1,72 +1,39 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Professional Dashboard</title>
+    <title>Vite App</title>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="./main.js"></script>
   </head>
 
-  <body class="bg-gray-100 font-sans">
-    <div class="container mx-auto px-4 py-8">
-      <header class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-gray-800 mb-2">
-          Professional Dashboard
-        </h1>
-        <p class="text-xl text-gray-600">Welcome to your centralized hub</p>
-      </header>
+  <body
+    class="flex min-h-screen flex-col justify-between p-8 font-geist text-xl sm:p-20"
+  >
+    <main class="flex flex-grow flex-col items-center justify-center">
+      <h1>Hi. I'm samarth.</h1>
 
-      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <li>
-          <a href="event.html" class="li-a">
-            <span class="text-lg font-semibold text-gray-700"
-              >Color Changer</span
-            >
-            <p class="text-sm text-gray-600 mt-2">
-              Experiment with dynamic color changes
-            </p>
-          </a>
-        </li>
-        <li>
-          <a href="htmls/todo.html" class="li-a">
-            <span class="text-lg font-semibold text-gray-700">Todo List</span>
-            <p class="text-sm text-gray-600 mt-2">
-              Manage your tasks efficiently
-            </p>
-          </a>
-        </li>
-        <li>
-          <a href="htmls/sort.html" class="li-a">
-            <span class="text-lg font-semibold text-gray-700"
-              >Sorting Visualizer</span
-            >
-            <p class="text-sm text-gray-600 mt-2">
-              Visualize various sorting algorithms
-            </p>
-          </a>
-        </li>
-        <li>
-          <a href="src/todo/index.html" class="li-a">
-            <span class="text-lg font-semibold text-gray-700"
-              >Advanced Todo</span
-            >
-            <p class="text-sm text-gray-600 mt-2">
-              Enhanced todo management system
-            </p>
-          </a>
-        </li>
-      </ul>
+      <div class="mt-4"></div>
 
-      <div id="app" class="bg-white mt-4 shadow-md rounded-lg p-6">
-        <!-- Content for the app will be inserted here -->
-      </div>
-    </div>
+      <a href="event.html" class="text-blue-500 hover:underline">
+        color changer app
+      </a>
+      <a href="htmls/todo.html" class="text-blue-500 hover:underline"
+        >no state todo list
+      </a>
+      <a href="htmls/sort.html" class="text-blue-500 hover:underline">
+        bubble sorting visualizer
+      </a>
+      <a href="src/todo/index.html" class="text-blue-500 hover:underline">
+        todo app with backend
+      </a>
+    </main>
+    <footer></footer>
 
-    <footer class="text-center mt-8 text-gray-600">
-      <p>&copy; 2023 Professional Dashboard. All rights reserved.</p>
+    <footer class="mt-8 text-center text-gray-500">
+      <div id="app"></div>
     </footer>
   </body>
 </html>

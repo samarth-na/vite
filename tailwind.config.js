@@ -9,7 +9,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                github: ["Inter", "sans-serif"], // Naming the font "github" for convenience
+                geist: ['Geist', 'sans-serif'],
             },
         },
     },

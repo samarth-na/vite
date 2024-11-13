@@ -9,6 +9,8 @@
     "printWidth": 80,
     "xmlWhitespaceSensitivity": "strict",
     "xmlSortAttributes": false,
+
+
     "overrides": [
         {
             "files": "*.html",
