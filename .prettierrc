@@ -9,14 +9,19 @@
     "printWidth": 80,
     "xmlWhitespaceSensitivity": "strict",
     "xmlSortAttributes": false,
-
-
     "overrides": [
         {
             "files": "*.html",
             "options": {
                 "tabWidth": 2
             }
+        },
+        {
+            "files": "*.jsx",
+            "options": {
+                "tabWidth": 2
+            }
         }
-    ]
+    ],
+    "plugins": ["prettier-plugin-tailwindcss"]
 }
