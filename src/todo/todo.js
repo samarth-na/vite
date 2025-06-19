@@ -13,14 +13,14 @@ function getValues() {
     return task;
 }
 
-export async function sendData(dataJson) {
+export async function sendData(data) {
     try {
         const response = await fetch("/api/data", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: dataJson,
+            body: data,
         });
 
         const result = await response.json();
