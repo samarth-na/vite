@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quick Sort Visualizer</title>
+		<script type="module" src="../src/quick-sort-visualizer.js"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-gray-100 font-sans text-gray-800">
+		<div class="container mx-auto p-8">
+			<header class="text-center mb-8">
+				<h1 class="text-4xl font-bold">Quick Sort Visualizer</h1>
+				<button
+					id="start-btn"
+					class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors"
+				>
+					Start Visualization
+				</button>
+			</header>
+
+			<main>
+				<div id="array-container" class="flex justify-center items-end h-64 bg-white p-4 rounded-lg shadow-inner"></div>
+
+				<div class="mt-8">
+					<h2 class="text-2xl font-bold mb-4">Code Preview</h2>
+					<pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto"><code>
+async function quickSort(arr, low, high) {
+    if (low &lt; high) {
+        let pi = await partition(arr, low, high);
+
+        await quickSort(arr, low, pi - 1);
+        await quickSort(arr, pi + 1, high);
+    }
+}
+
+async function partition(arr, low, high) {
+    let pivot = arr[high];
+    let i = low - 1;
+
+    for (let j = low; j &lt; high; j++) {
+        if (arr[j] &lt; pivot) {
+            i++;
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            await updateVisualization(arr);
+        }
+    }
+
+    [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+    await updateVisualization(arr);
+
+    return i + 1;
+}
+					</code></pre>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

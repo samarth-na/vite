@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>A* Pathfinding Visualizer</title>
+		<script type="module" src="../src/a-star-visualizer.js"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--bg-color: #1a202c;
+				--text-color: #e2e8f0;
+				--container-bg: #2d3748;
+				--node-color: #a0aec0;
+				--edge-color: #718096;
+			}
+			body {
+				background-color: var(--bg-color);
+				color: var(--text-color);
+			}
+			#graph-container {
+				position: relative;
+				width: 95vw; /* Use viewport width */
+				height: 600px;
+				background-color: var(--container-bg);
+				border: 1px solid var(--edge-color);
+				overflow: hidden; /* Hide overflow if nodes go slightly out */
+			}
+			.node {
+				position: absolute;
+				width: 10px; /* Smaller node size */
+				height: 10px; /* Smaller node size */
+				border-radius: 50%;
+				background-color: var(--node-color);
+				cursor: pointer;
+				transition: transform 0.2s;
+				z-index: 1; /* Ensure nodes are above SVG lines */
+			}
+			.node:hover {
+				transform: scale(1.5); /* Slightly larger hover effect */
+			}
+			svg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 0; /* Ensure SVG is behind nodes */
+			}
+		</style>
+	</head>
+	<body class="font-sans">
+		<div class="container mx-auto p-8">
+			<header class="text-center mb-8">
+				<h1 class="text-4xl font-bold">A* Pathfinding Visualizer</h1>
+				<p class="text-lg text-gray-400 mt-2">Click two nodes to set the start and end points.</p>
+				<div>
+					<button
+						id="start-btn"
+						class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors"
+					>
+						Start Visualization
+					</button>
+					<button
+						id="reset-btn"
+						class="mt-4 ml-4 bg-gray-600 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition-colors"
+					>
+						Reset
+					</button>
+				</div>
+			</header>
+
+			<main class="flex flex-col items-center">
+				<div id="graph-container" class="rounded-lg shadow-lg"></div>
+
+				<div class="mt-8 w-full max-w-4xl">
+					<h2 class="text-2xl font-bold mb-4">Code Preview</h2>
+					<pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto"><code>
+function aStar(startNode, endNode) {
+    let openSet = [startNode];
+    let closedSet = [];
+
+    while (openSet.length &gt; 0) {
+        let winner = 0;
+        for (let i = 0; i &lt; openSet.length; i++) {
+            if (openSet[i].f &lt; openSet[winner].f) {
+                winner = i;
+            }
+        }
+
+        let current = openSet[winner];
+
+        if (current === endNode) {
+            // Path found
+            let path = [];
+            let temp = current;
+            path.push(temp);
+            while (temp.previous) {
+                path.push(temp.previous);
+                temp = temp.previous;
+            }
+            return path;
+        }
+
+        openSet = openSet.filter(node =&gt; node !== current);
+        closedSet.push(current);
+
+        let neighbors = current.neighbors;
+        for (let i = 0; i &lt; neighbors.length; i++) {
+            let neighbor = neighbors[i].node;
+            let weight = neighbors[i].weight;
+
+            if (!closedSet.includes(neighbor)) {
+                let tempG = current.g + weight;
+
+                if (openSet.includes(neighbor)) {
+                    if (tempG &lt; neighbor.g) {
+                        neighbor.g = tempG;
+                    }
+                } else {
+                    neighbor.g = tempG;
+                    openSet.push(neighbor);
+                }
+
+                neighbor.h = heuristic(neighbor, endNode);
+                neighbor.f = neighbor.g + neighbor.h;
+                neighbor.previous = current;
+            }
+        }
+    }
+
+    // No solution
+    return [];
+}
+					</code></pre>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

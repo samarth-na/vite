@@ -1,39 +1,147 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Vite App</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Samarth's Portfolio</title>
+		<script type="module" src="./main.js"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-gray-100 font-sans text-gray-800">
+		<div class="container mx-auto p-8">
+			<header class="text-center mb-12">
+				<h1 class="text-5xl font-bold mb-2">Hi, I'm Samarth.</h1>
+				<p class="text-xl text-gray-600">
+					A collection of my web experiments and projects.
+				</p>
+			</header>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<main>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div
+						class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<h2 class="text-2xl font-bold mb-2">Color Changer App</h2>
+						<p class="text-gray-600 mb-4">
+							A simple app that changes the background color on click.
+						</p>
+						<a
+							href="event.html"
+							class="text-blue-500 hover:underline"
+							>View Project</a
+						>
+					</div>
 
-    <script type="module" src="./main.js"></script>
-  </head>
+					<div
+						class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<h2 class="text-2xl font-bold mb-2">No-State Todo List</h2>
+						<p class="text-gray-600 mb-4">
+							A basic todo list without any state management.
+						</p>
+						<a
+							href="htmls/todo.html"
+							class="text-blue-500 hover:underline"
+							>View Project</a
+						>
+					</div>
 
-  <body
-    class="flex min-h-screen flex-col justify-between p-8 font-geist text-xl sm:p-20"
-  >
-    <main class="flex flex-grow flex-col items-center justify-center">
-      <h1>Hi. I'm samarth.</h1>
+					<div
+						class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<h2 class="text-2xl font-bold mb-2">
+							Bubble Sort Visualizer
+						</h2>
+						<p class="text-gray-600 mb-4">
+							A visual representation of the bubble sort algorithm.
+						</p>
+						<a
+							href="htmls/sort.html"
+							class="text-blue-500 hover:underline"
+							>View Project</a
+						>
+					</div>
 
-      <div class="mt-4"></div>
+					<div
+						class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<h2 class="text-2xl font-bold mb-2">
+							Todo App with Backend
+						</h2>
+						<p class="text-gray-600 mb-4">
+							A more advanced todo app with a backend connection.
+						</p>
+						<a
+							href="src/todo/index.html"
+							class="text-blue-500 hover:underline"
+							>View Project</a
+						>
+					</div>
 
-      <a href="event.html" class="text-blue-500 hover:underline">
-        color changer app
-      </a>
-      <a href="htmls/todo.html" class="text-blue-500 hover:underline"
-        >no state todo list
-      </a>
-      <a href="htmls/sort.html" class="text-blue-500 hover:underline">
-        bubble sorting visualizer
-      </a>
-      <a href="src/todo/index.html" class="text-blue-500 hover:underline">
-        todo app with backend
-      </a>
-    </main>
-    <footer></footer>
+					<div
+						class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<h2 class="text-2xl font-bold mb-2">Timer App</h2>
+						<p class="text-gray-600 mb-4">
+							A simple timer application.
+						</p>
+						<a
+							href="pages/timer/index.html"
+							class="text-blue-500 hover:underline"
+							>View Project</a
+						>
+					</div>
 
-    <footer class="mt-8 text-center text-gray-500">
-      <div id="app"></div>
-    </footer>
-  </body>
+					<div
+						class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<h2 class="text-2xl font-bold mb-2">Weather App</h2>
+						<p class="text-gray-600 mb-4">
+							Fetches weather data based on your location.
+						</p>
+						<a
+							href="pages/weather/index.html"
+							class="text-blue-500 hover:underline"
+							>View Project</a
+						>
+					</div>
+
+					<div
+						class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<h2 class="text-2xl font-bold mb-2">Quick Sort Visualizer</h2>
+						<p class="text-gray-600 mb-4">
+							A visual representation of the Quick Sort algorithm with code preview.
+						</p>
+						<a
+							href="htmls/quick-sort.html"
+							class="text-blue-500 hover:underline"
+							>View Project</a
+						>
+					</div>
+
+					<div
+						class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<h2 class="text-2xl font-bold mb-2">A* Pathfinding Visualizer</h2>
+						<p class="text-gray-600 mb-4">
+							A visual representation of the A* pathfinding algorithm on a grid.
+						</p>
+						<a
+							href="htmls/a-star.html"
+							class="text-blue-500 hover:underline"
+							>View Project</a
+						>
+					</div>
+				</div>
+			</main>
+
+			<footer class="text-center mt-12 text-gray-500">
+				<p>&copy; 2025 Samarth. All rights reserved.</p>
+			</footer>
+		</div>
+	</body>
 </html>
